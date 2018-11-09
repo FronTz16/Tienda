@@ -1,0 +1,24 @@
+{%extends 'base/index.html'%}
+{%load staticfiles%}
+
+{%block extracss%}
+<link rel="stylesheet" type="text/css" href="{%static 'css/style_especial.css'%}">
+{%endblock%}
+
+{%block content %}
+<ol>
+	<li>Opcion A</li>
+	<li>Opcion B</li>
+	<li>Opcion C</li>
+</ol>
+{%include 'base/informacionAdicional.html'%}
+{%endblock%}
+
+{%for cliente in clientes %}
+<p>{{cliente.nombre }}
+	{{cliente.apellido}}
+</p>
+	{%empty%}
+	<p>NO hay clientes</p>
+
+{%endfor%}

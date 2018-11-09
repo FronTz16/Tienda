@@ -1,0 +1,36 @@
+{%load staticfiles%}
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Estilo para todas las paginas que hereden de esta plantilla -->
+	<link rel="stylesheet" type="text/css" href="{%static 'css/style.css'%}">
+	<!-- Bloque para importar otros css por pagina -->
+	{% block extracss %}{% endblock %}	
+
+
+{% block tittle %}
+<title>
+Proyecto
+</title>
+{% endblock %}
+</head>
+<body>
+<header>
+{% block header %}
+Este es el encabezado
+{% endblock %}
+</header>
+
+<div>
+{% block content %}
+Contenido de la página
+{% endblock %}
+</div>
+
+<footer>
+{% block footer %}
+Este es el pie de página
+{% endblock %}
+</footer>
+</body>
+</html>
